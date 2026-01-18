@@ -1,0 +1,11 @@
+services:
+  vcmilobby:
+    build: .
+    container_name: vcmi-lobby
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "3031:3031"
+    volumes:
+      - ./database:/root/.local/share/vcmi
